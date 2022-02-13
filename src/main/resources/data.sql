@@ -1,12 +1,12 @@
-insert into boards (name) values
+insert into BOARDS (NAME) values
 ('personal'),('proyectoX');
 
-insert into taskLists (name,boardId) values
+insert into TASK_LISTS (NAME, BOARD_ID) values
 ('TODO', 1), ('DONE', 1),
 ('Historias de usuario',2), ('Bugs', 2);
 
 
-insert into tasks (taskListId, name, description)
+insert into TASKS (TASK_LIST_ID, NAME, DESCRIPTION)
 values (1,'Innovative', 'semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis'),
 (1,'optimizing', 'eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh'),
 (1,'heuristic', 'ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis'),

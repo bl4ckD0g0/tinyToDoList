@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Tablero</title>
+        <link rel="stylesheet" href="/css/basic.css">
+    </head>
+    <body>
+        <main class="board">
+            <input type="text" id="task_input" placeholder="Introduce una tarea">
+
+            <ol>
+                <li id="list_todo" class="list">
+                    <header class="list_header">
+                        <h1>TODO</h1>
+                        <ol class="list_header_menu">
+                            <li class="list_header_option">
+                                <button>borrar todo</button>
+                            </li>
+
+                            <li class="list_header_option">
+                                <button>Ordenar</button>
+                            </li>
+                        <ol>
+                    </header>
+
+                    <section class="list_body">
+                        <ol>
+                            <li class="task_mini">
+                                <h2 class="task_mini_head">Estudiar Spring</h2>
+                                <button class="btn_task_delete">Borrar</button
+                            </li>
+
+                            <li class="task_mini">
+                                <h2 class="task_mini_head">Comprar proteina en polvo</h2>
+                                <button class="btn_task_delete">Borrar</button
+                            </li>
+
+                        </ol>
+
+                    </section>
+                </li>
+
+                <li id="list_done" class="list">
+                    <header class="list_header">
+                        <h1>DONE</h1>
+                        <ol class="list_header_menu">
+                            <li class="list_header_option">
+                                <button>borrar todo</button>
+                            </li>
+
+                            <li class="list_header_option">
+                                <button>Ordenar</button>
+                            </li>
+                        <ol>
+                    </header>
+
+                    <section class="list_body">
+                        <ol>
+                            <li class="task_mini">
+                                <h2 class="task_mini_head">Recuperar las gemas del infinito</h2>
+                                <button class="btn_task_delete">Borrar</button>
+                            </li>
+
+                            <li class="task_mini">
+                                <h2 class="task_mini_head">Demostrar la hipotesis de Riemann</h2>
+                                <button class="btn_task_delete">Borrar</button>
+                            </li>
+                        </ol>
+
+                    </section>
+                </li>
+            </ol>
+        </main>
+    </body>
+</html>

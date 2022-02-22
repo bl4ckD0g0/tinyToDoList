@@ -15,8 +15,12 @@ public class BoardService {
     @Autowired
     BoardRepository boardRepository;
 
-    public Board getBoard(Integer id) {
+    public Board getById(Integer id) {
         return boardRepository.findBoardById(id);
+    }
+
+    public Board getByName(String name) {
+        return boardRepository.findBoardByName(name);
     }
 
     public List<Board> getAll(){

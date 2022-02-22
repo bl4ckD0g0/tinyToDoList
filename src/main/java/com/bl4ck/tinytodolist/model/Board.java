@@ -12,10 +12,10 @@ public class Board{
     @Column(name = "ID")
     int id;
 
-
     @Column(name = "NAME")
     String name;
 
     @OneToMany(mappedBy = "boardId")
     List<TaskList> taskLists;
+
 }

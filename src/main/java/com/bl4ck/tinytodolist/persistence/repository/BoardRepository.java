@@ -8,5 +8,6 @@ import com.bl4ck.tinytodolist.model.Board;
 @Repository
 public interface BoardRepository extends JpaRepository<Board, Integer> {
     Board findBoardById(Integer id);
+    Board findBoardByName(String name);
     List<Board> findAll();
 }

@@ -1,6 +1,8 @@
 package com.bl4ck.tinytodolist.model;
 
 import lombok.Data;
+
+import java.io.Serializable;
 import java.util.List;
 import javax.persistence.*;
 
@@ -8,7 +10,7 @@ import javax.persistence.*;
 @Data
 @Table(name = "TASK_LISTS")
 @Entity
-public class TaskList{
+public class TaskList implements Serializable{
 
     @Id @GeneratedValue
     @Column(name = "ID")
@@ -20,7 +22,6 @@ public class TaskList{
     @Column(name = "BOARD_ID")
     int boardId;
 
-    //TODO Creo que esta anotacion es para que lo ignore este atributo de momento
-    @Transient
+    @OneToMany(mappedBy = "taskListId" )
     List<Task> tasks;
 }

@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans;
+}
+
+h1{
+    text-align: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    background-color: #7e9380;
+    margin: 20px;
+    border-radius: 10px;
+ }
+
+.board-mini{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+}
+
+.board-mini > p{
+    background-color: #5f5fac;
+    height: 100%;
+    line-height: 200px;
+    text-align: center;
+    font-size: xx-large;
+    border-radius: 10px;
+    border: 2px solid #4aee00;
+}

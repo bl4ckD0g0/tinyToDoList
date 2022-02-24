@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Todos los tableros</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/css/boards.css">
+</head>
+<body>
+    <h1>Todos tus tableros amigo</h1>
+    <main>
+        <div class="board-mini" th:each="board : ${boards}">
+            <p th:text="${board.name}"></p>
+        </div>
+    </main>
+</body>
+</html>

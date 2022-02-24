@@ -3,7 +3,6 @@ import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
-
 import java.io.Serializable;
 import java.util.List;
 
@@ -12,7 +11,7 @@ import java.util.List;
 @Table(name = "BOARDS")
 @Entity
 public class Board implements Serializable{
-    @Id @GeneratedValue 
+    @Id @GeneratedValue
     @Column(name = "ID")
     int id;
 

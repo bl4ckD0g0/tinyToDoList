@@ -1,3 +1,11 @@
+:root{
+/*     --main-color: #ffccee; */
+    --main-color: #d5d5d5;
+    
+    --icon-size: 30px;
+    --icon-border: 2px solid var(--main-color);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,19 +15,19 @@
 .board{
 /*     background-color: blue; */
     height: 100vh;
+    font-family: sans-serif;
 }
 #task_input {
     display: block;
     margin: 20px auto;
     font-size: large;
-    
 }
 
 .board > ol{
     list-style: none;
-    
+
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     align-items: flex-start;
     justify-content: start;
 }
@@ -28,7 +36,7 @@
 /* TASK LIST */
 
 .list{
-    background-color: red;
+    border: 2px solid var(--main-color);
     border-radius: 3px;
     margin: 20px;
     overflow: hidden;
@@ -40,30 +48,56 @@
 }
 
 .list_header{
-    background-color: orange;
+    background-color: var(--main-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
 }
 
-.list_header_menu:before{
-    background-color: green;
-    content: '...';
-    border-radius: 50%;
+.list_header_menu{
+    display: none; 
 }
 
-.list_header_menu{
-    width: 30px;
-    height: 30px;
+.btn_list_header_menu{
+    background-image: url("/icons/menu.svg");
+    border: 2px solid black;
 }
+
+.btn_list_header_menu,.btn_task_delete{
+    background-color: transparent;
+    background-size: cover;
+
+    border: var(--icon-border);
+
+    min-width: var(--icon-size);
+    min-height: var(--icon-size);
+}
+
 
 .list_header_menu > li{
-    display: none;
 }
 
 .task_mini{
-    background-color: blue;
+    border: 2px solid var(--main-color);
     border-radius: 3px;
     margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.btn_task_delete{
+    background-image: url("/icons/trash.svg");
+}
+
+.task_mini_head{
+    font-size: medium;
+    display: inline;
+    margin-right: 10px;
+}
+
+.btn_task_delete:hover{
+    border-color: red;
 }

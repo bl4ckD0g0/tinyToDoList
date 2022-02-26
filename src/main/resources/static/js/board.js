@@ -11,8 +11,6 @@ task_input.addEventListener('keypress', (event) =>
     });
 
 function insertTask(task_name){
-    console.log(task_name);
-
     //FIXME esta creacion manual de el elemnto HTML es un poco chunga
     let li = document.createElement('li');
     li.classList.add('task_mini');
@@ -38,7 +36,6 @@ function insertTask(task_name){
 
     btn_borrar.addEventListener('click', (event) =>
         {
-            //TODO borrar la tarea en el servidor
             deleteTask(li);
         });
 
@@ -56,9 +53,9 @@ function animateGrow(elemento_HTML){
     let size = 0;
     let t = setInterval(function ()
     {
-        elemento_HTML.style.transform = `scale(${size}, ${size}`;
+        elemento_HTML.style.transform = `scale(${size}, ${size})`;
         size += 0.06;
-        if(size => 1) {
+        if(size >= 1) {
             clearInterval(t);
             elemento_HTML.style.transform = 'scale(1, 1)';
         }
@@ -70,7 +67,7 @@ function animateShrink(elemento_HTML){
     let size = 1;
     let t = setInterval(function ()
     {
-        elemento_HTML.style.transform = `scale(${size}, ${size}`;
+        elemento_HTML.style.transform = `scale(${size}, ${size})`;
         size -= 0.06;
         if(size <= 0) {
             clearInterval(t);
